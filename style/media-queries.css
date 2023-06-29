@@ -1,0 +1,167 @@
+/* Version tabette */
+
+@media screen and (min-width: 700px) {
+  body {
+    padding-bottom: var(--xxl);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: left;
+  }
+  /* Logo et intro */
+  header > picture > img,
+  .intro {
+    max-width: 40rem;
+  }
+  /* Conteneur */
+  .conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s);
+    /*  */
+    width: 100%;
+  }
+  .conteneur > img,
+  .conteneur > picture {
+    max-width: 60%;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  /* paragraphes classiques */
+  .conteneur:nth-child(2) > p:nth-child(4),
+  .conteneur:nth-child(3) > p:nth-child(3) {
+    width: 35%;
+    text-align: right;
+  }
+  /* Paragraphes strong */
+  p.strong {
+    text-align: center;
+    margin-top: unset;
+  }
+  /* image minimap */
+  .conteneur:nth-child(2) > img:nth-child(3) {
+    display: none;
+  }
+  .strong {
+    width: 100%;
+  }
+}
+
+/* Version ordinateur classique 1366*768 */
+
+@media screen and (min-width: 1200px) {
+  body {
+    /* background-color: rgba(0, 255, 0, 0.281); */
+    /* padding: var(--xxl) var(--xl); */
+    /*  */
+    overflow-x: hidden;
+  }
+  .intro > h1 {
+    margin: var(--xl);
+  }
+  .intro > div > p {
+    padding: var(--m) 0 var(--m) var(--xl);
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .conteneur {
+    display: block;
+    max-width: 60%;
+    /*  */
+    padding: 0 var(--xl);
+  }
+  /* Section projets */
+  .conteneur:nth-child(3) {
+    align-self: flex-end;
+    /*  */
+    display: flex;
+    justify-content: right;
+    /*  */
+    margin-top: 13rem;
+  }
+  /* paragraphes classiques */
+  .conteneur:nth-child(2) > p:nth-child(4),
+  .conteneur:nth-child(3) > p:nth-child(3) {
+    width: unset;
+    max-width: 35em;
+    margin-bottom: var(--xs);
+  }
+  .conteneur:nth-child(2) > p:nth-child(4) {
+    text-align: left;
+  }
+  .conteneur:nth-child(3) > p:nth-child(3) {
+    text-align: right;
+  }
+  /* Titres */
+  .conteneur:nth-child(3) > h2:nth-child(1) {
+    text-align: right;
+  }
+  /* Photos  */
+  .conteneur > img,
+  .conteneur > picture > img {
+    max-width: 90%;
+    margin-bottom: var(--m);
+  }
+  /* 
+    
+    Animation */
+  /* SVG */
+  #svg-chemin,
+  #bateau {
+    display: block;
+  }
+  #bateau {
+    position: absolute;
+    top: -355px;
+    left: 0;
+    /*  */
+    max-width: 18rem;
+    /*  */
+    transition: opacity 0.5s ease-in;
+  }
+  #svg-chemin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    /*  */
+    fill: none;
+    stroke: rgba(0, 0, 0, 0);
+    stroke-width: 2px;
+    stroke-miterlimit: 10;
+  }
+}
+
+/* Version ordinateur grand écran 1900 */
+
+@media screen and (min-width: 1900px) {
+  /* body {
+    background-color: pink;
+  } */
+  main {
+    flex-direction: row;
+  }
+  .intro {
+    width: 100%;
+    max-width: unset;
+  }
+  .intro > div > p {
+    max-width: 35rem;
+  }
+  .conteneur {
+    max-width: 50%;
+  }
+  /* section projets */
+  .conteneur:nth-child(3) {
+    margin-top: var(--xxl);
+  }
+  /* SVG */
+  #bateau {
+    z-index: -1;
+  }
+}

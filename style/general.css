@@ -1,0 +1,213 @@
+:root {
+  /* TYPOS */
+  --signika: "Signika";
+  --open-sans: "open sans";
+  /* COULEURS */
+  --primaire-saturee: rgb(254, 220, 11);
+  --secondaire-saturee: rgb(187, 239, 43);
+  --tertiaire-saturee: rgb(255, 119, 51);
+  /*  */
+  --primaire-desat: rgb(255, 214, 49);
+  --secondaire-desat: rgb(202, 247, 62);
+  --tertiaire-desat: rgb(242, 139, 82);
+  /*  */
+  --neutre-sombre: rgb(25, 25, 25);
+  --neutre-medium: rgb(78, 75, 75);
+  --neutre-clair: rgb(240, 240, 219);
+  /* ESPACES */
+  --xxs: 0.25rem;
+  --xs: 0.5rem;
+  --s: 1rem;
+  --m: 1.5rem;
+  --l: 3rem;
+  --xl: 4rem;
+  --xxl: 5rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: calc(1em + 0.25vw);
+  color: var(--neutre-sombre);
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
+}
+
+body {
+  padding-bottom: var(--m);
+  line-height: 1.5;
+  /*  */
+  font-family: var(--open-sans);
+  /*  */
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--neutre-sombre);
+}
+/* TITRES */
+
+h1,
+h2,
+h3,
+h4 {
+  display: inline-block;
+  /*  */
+  font-family: "Signika";
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  line-height: 1;
+  text-align: center;
+  /*  */
+  margin-bottom: var(--m);
+}
+
+h1 {
+  position: relative;
+  /*  */
+  font-size: calc(4.6em + 0.25vw);
+}
+
+h2 {
+  width: 100%;
+  font-size: calc(3.5em + 0.25vw);
+}
+
+h3 {
+  font-size: calc(2.6em + 0.25vw);
+}
+
+h4 {
+  font-size: calc(2em + 0.25vw);
+}
+
+/*  */
+
+p {
+  margin-bottom: var(--m);
+}
+
+/* logo */
+
+picture img {
+  margin-bottom: var(--l);
+}
+
+.strong {
+  display: inline-block;
+  /*  */
+  margin-top: var(--s);
+  /*  */
+  font-size: calc(1em + 0.3vw);
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+}
+
+.conteneur {
+  margin-top: var(--xxl);
+  padding: 0 var(--m);
+}
+
+/* Surligné */
+
+.surligne {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: -1;
+  /*  */
+  height: 1.25rem;
+  width: 100%;
+  /*  */
+  background-color: var(--primaire-saturee);
+}
+
+/* Fond de couleurs */
+
+.fond-couleur1 {
+  position: relative;
+  z-index: -2;
+  /*  */
+  background-color: var(--primaire-saturee);
+  /*  */
+  padding: var(--m);
+}
+
+/* INTRO */
+
+.intro > h1 {
+  padding: 0 var(--m);
+}
+
+/* L’ASSOCIATION */
+
+.conteneur:nth-child(2) > img:nth-child(3) {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* IMAGES */
+
+.conteneur > img {
+  margin-bottom: var(--m);
+}
+
+/* BOUTONS */
+
+.conteneur:nth-child(2) > button,
+.conteneur:nth-child(3) > button {
+  display: flex;
+  align-items: center;
+  /*  */
+  padding: var(--xs) var(--m);
+  border-radius: var(--m);
+  border: none;
+  outline: 2px solid var(--neutre-sombre);
+  outline-offset: -5px;
+  /*  */
+  font-size: var(--s);
+  font-weight: 700;
+  /*  */
+  margin: auto;
+}
+
+.conteneur:nth-child(2) > button {
+  background-color: var(--secondaire-saturee);
+}
+
+.conteneur:nth-child(3) > button {
+  background-color: var(--tertiaire-saturee);
+}
+
+/* Icones dans les boutons */
+
+.conteneur:nth-child(2) > button > svg,
+.conteneur:nth-child(3) > button > svg {
+  flex-shrink: 0;
+  height: 30px;
+  margin-right: var(--xs);
+}
+
+/* SVG */
+
+#svg-chemin,
+#bateau {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+}

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Signika";
+  src: url("typos/signika.woff2") format("woff2 supports variations"),
+    url("typos/signika.woff2") format("woff2-variations"),
+    url("typos/signika.woff") format("woff"),
+    url("typos/signika.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open sans";
+  src: url("typos/opensans.woff2") format("woff2 supports variations"),
+    url("typos/opensans.woff2") format("woff2-variations"),
+    url("typos/opensans.woff2") format("woff2"),
+    url("typos/opensans.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open sans";
+  src: url("typos/opensans-italic.woff2") format("woff2 supports variations"),
+    url("typos/opensans-italic.woff2") format("woff2-variations"),
+    url("typos/opensans-italic.woff") format("woff");
+  font-weight: 100 900;
+  font-style: italic;
+}
